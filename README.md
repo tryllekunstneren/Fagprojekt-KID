@@ -12,7 +12,6 @@ UMAP embeddings for the **S500 simple** dataset across all dropout levels (0.1�
 
 - **File:** `UMAP_ALL_S500.ipynb`
 
-### 🔹 `UMAP_S500_O/`
 UMAP embeddings for the **S500 complex** dataset (with nested cell subclasses) across all dropout levels.
 
 - **File:** `UMAP_ALL_S500_O.ipynb`
@@ -27,7 +26,6 @@ UMAP embeddings for the **S10000 simple** dataset across all dropout levels.
 
 - **File:** `UMAP_ALL_S10000.ipynb`
 
-### 🔹 `UMAP_S10000_O/`
 UMAP embeddings for the **S10000 complex** dataset (with nested cell subclasses) across all dropout levels.
 
 - **File:** `UMAP_ALL_S10000_O.ipynb`
@@ -50,10 +48,10 @@ UMAP embeddings for **S10000 complex**, comparing dropout levels 0.2 and 0.8.
 
 ## ✅ Baseline UMAPs (No Dropout)
 
-### 🔸 `UMAP_S500.png`
+### 🔸 `UMAP_S500.ipynb`
 UMAP embedding for **S500 simple**, no dropout applied.
 
-### 🔸 `UMAP_S500C.png`
+### 🔸 `UMAP_S500C.ipynb`
 UMAP embedding for **S500 complex**, no dropout applied.
 
 ---

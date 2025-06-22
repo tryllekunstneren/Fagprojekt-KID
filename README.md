@@ -31,9 +31,9 @@ Contains all UMAP and evaluation plots for the **S500 simple** and **S500 comple
 
 #### Evaluation Metric Sensitivity (S500 only):
 
-- `UMAP_EVALMETRICS_EUCLIDEAN_S500.png`  
-- `UMAP_EVALMETRICS_MANHATTAN_S500.png`  
-- `UMAP_EVALMETRICS_MINKOWSKI_S500.png`  
+- `UMAP_EVALMETRICS_EUCLIDEAN_S500.ipynb`  
+- `UMAP_EVALMETRICS_MANHATTAN_S500.ipynb`  
+- `UMAP_EVALMETRICS_MINKOWSKI_S500.ipynb`  
 
 ---
 

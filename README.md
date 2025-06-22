@@ -4,84 +4,42 @@
 This repository contains code and visualizations for evaluating UMAP embeddings on simulated single-cell RNA-seq (scRNA-seq) data generated with [SymSim](https://github.com/YosefLab/SymSim). The goal of this project is to systematically explore how different distance metrics and dropout levels affect UMAP performance in sparse, high-dimensional gene expression data.
 
 ## 📁 Folder Overview
-
-All figures and plots are grouped by dataset and analysis type.
-
-### 🔹 `UMAP_S500/`
-UMAP embeddings for the **S500 simple** dataset across all dropout levels (0.1–0.9).
-
-- **File:** `UMAP_ALL_S500.ipynb`
-
-UMAP embeddings for the **S500 complex** dataset (with nested cell subclasses) across all dropout levels.
-
-- **File:** `UMAP_ALL_S500_O.ipynb`
-
-### 🔹 `UMAP_S5000/`
-UMAP embeddings for the **S5000 simple** dataset across all dropout levels.
-
-- **File:** `UMAP_ALL_S5000.ipynb`
-
-### 🔹 `UMAP_S10000/`
-UMAP embeddings for the **S10000 simple** dataset across all dropout levels.
-
-- **File:** `UMAP_ALL_S10000.ipynb`
-
-UMAP embeddings for the **S10000 complex** dataset (with nested cell subclasses) across all dropout levels.
-
-- **File:** `UMAP_ALL_S10000_O.ipynb`
----
-
-## 🖼️ Figures for Paper: Focused UMAP Visualizations
-
-These UMAP plots were used in the final paper/report to highlight specific dropout conditions and metric behavior.
-
-### 🔸 `UMAP_S500_UMAPSFORPAPER_DROPOUT04_06.ipynb`
-UMAP embeddings for **S500 simple**, comparing dropout levels 0.4 and 0.6.
-
-### 🔸 `UMAP_S10000_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`
-UMAP embeddings for **S10000 simple**, comparing dropout levels 0.2 and 0.8.
-
-### 🔸 `UMAP_S10000C_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`
-UMAP embeddings for **S10000 complex**, comparing dropout levels 0.2 and 0.8.
+All figures, notebooks, and plots are grouped by dataset and analysis type.
 
 ---
 
-## ✅ Baseline UMAPs (No Dropout)
+### 🔹 UMAP_S500/
 
-### 🔸 `UMAP_S500.ipynb`
-UMAP embedding for **S500 simple**, no dropout applied.
+Contains all UMAP and evaluation plots for the **S500 simple** and **S500 complex** datasets.
 
-### 🔸 `UMAP_S500C.ipynb`
-UMAP embedding for **S500 complex**, no dropout applied.
+#### Files:
+- `UMAP_ALL_S500.ipynb`  
+  UMAP embeddings for **S500 simple** across all dropout levels (0.1–0.9).
+  
+- `UMAP_ALL_S500_O.ipynb`  
+  UMAP embeddings for **S500 complex** (nested subclasses) across all dropout levels.
 
----
+- `UMAP_S500_UMAPSFORPAPER_DROPOUT04_06.ipynb`  
+  Focused UMAP visualizations of **S500 simple** at dropout 0.4 and 0.6 for the paper.
 
-## ⚙️ Code Summary
+- `UMAP_S500.ipynb`  
+  UMAP visualizations for the **S500 simple** dataset with no dropout.
 
-The Python code used to generate these plots follows a unified pipeline:
+- `UMAP_S500C.ipynb`  
+  UMAP visualizations for the **S500 complex** dataset with no dropout.
 
-- Loads expression matrices and cell-type labels using `scanpy` and `pandas`
-- Constructs k-nearest neighbor graphs with `sc.pp.neighbors`
-- Applies UMAP (`sc.tl.umap`) using different distance metrics:
-  - Euclidean (L2)
-  - Manhattan (L1)
-  - Minkowski with p=0.5
-- Repeats embeddings multiple times to assess stability
-- Computes:
-  - Trustworthiness (local structure preservation)
-  - Silhouette score (cluster separability)
-- Results are aggregated and saved for visualization
+#### 📊 Evaluation Metric Sensitivity (S500 only):
+To investigate metric bias in evaluation, we generated UMAPs using a fixed metric (Euclidean, Manhattan, or Minkowski) and evaluated each using all three metrics (Euclidean, Manhattan, Minkowski p=0.5).
 
-Refer to the project report or notebook scripts for specific parameter settings and implementation details.
-
----
-
-## 📌 Notes
-
-- All UMAPs were computed directly on the raw high-dimensional data (no PCA).
-- Dropout levels simulate increasing technical sparsity in scRNA-seq.
-- Metric evaluation bias was explored and documented.
-
+These comparisons are stored as:
+- `UMAP_EVALMETRICS_EUCLIDEAN_S500.png`  
+  UMAP built with Euclidean, evaluated with Euclidean, Manhattan, and Minkowski.
+  
+- `UMAP_EVALMETRICS_MANHATTAN_S500.png`  
+  UMAP built with Manhattan, evaluated with all three metrics.
+  
+- `UMAP_EVALMETRICS_MINKOWSKI_S500.png`  
+  UMAP built with Minkowski (p=0.5), evaluated with all three metrics.
 ---
 
 ## 📎 Citation

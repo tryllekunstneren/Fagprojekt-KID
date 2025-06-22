@@ -29,14 +29,11 @@ Contains all UMAP and evaluation plots for the **S500 simple** and **S500 comple
 - `UMAP_S500C.ipynb`  
   UMAP visualizations for the **S500 complex** dataset with no dropout.
 
-#### 📊 Evaluation Metric Sensitivity (S500 only):
-To investigate evaluation bias, we evaluated UMAPs (built with a fixed metric) using **all three evaluation metrics** (Euclidean, Manhattan, Minkowski p=0.5):
+#### Evaluation Metric Sensitivity (S500 only):
 
 - `UMAP_EVALMETRICS_EUCLIDEAN_S500.png`  
 - `UMAP_EVALMETRICS_MANHATTAN_S500.png`  
 - `UMAP_EVALMETRICS_MINKOWSKI_S500.png`  
-
-These results reveal that the closer a metric is to the evaluation metric (usually Euclidean), the more favorable the trustworthiness scores tend to be.
 
 ---
 

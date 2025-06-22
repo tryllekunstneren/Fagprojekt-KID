@@ -1,5 +1,4 @@
-# Fagprojekt-KID
-Fagprojekt about Distances in high dimensional sparse data
+
 # UMAP Evaluation on Simulated scRNA-seq Data
 
 This repository contains code and visualizations for evaluating UMAP embeddings on simulated single-cell RNA-seq (scRNA-seq) data generated with [SymSim](https://github.com/YosefLab/SymSim). The goal of this project is to systematically explore how different distance metrics and dropout levels affect UMAP performance in sparse, high-dimensional gene expression data.
@@ -11,36 +10,40 @@ All figures and plots are grouped by dataset and analysis type.
 ### 🔹 `UMAP_S500/`
 UMAP embeddings for the **S500 simple** dataset across all dropout levels (0.1–0.9).
 
-- **File:** `UMAP_ALL_S500.png`
+- **File:** `UMAP_ALL_S500.ipynb`
 
 ### 🔹 `UMAP_S500_O/`
 UMAP embeddings for the **S500 complex** dataset (with nested cell subclasses) across all dropout levels.
 
-- **File:** `UMAP_ALL_S500_O.png`
+- **File:** `UMAP_ALL_S500_O.ipynb`
 
 ### 🔹 `UMAP_S5000/`
 UMAP embeddings for the **S5000 simple** dataset across all dropout levels.
 
-- **File:** `UMAP_ALL_S5000.png`
+- **File:** `UMAP_ALL_S5000.ipynb`
 
 ### 🔹 `UMAP_S10000/`
 UMAP embeddings for the **S10000 simple** dataset across all dropout levels.
 
-- **File:** `UMAP_ALL_S10000.png`
+- **File:** `UMAP_ALL_S10000.ipynb`
 
+### 🔹 `UMAP_S10000_O/`
+UMAP embeddings for the **S10000 complex** dataset (with nested cell subclasses) across all dropout levels.
+
+- **File:** `UMAP_ALL_S10000_O.ipynb`
 ---
 
 ## 🖼️ Figures for Paper: Focused UMAP Visualizations
 
 These UMAP plots were used in the final paper/report to highlight specific dropout conditions and metric behavior.
 
-### 🔸 `UMAP_S500_UMAPSFORPAPER_DROPOUT04_06.png`
+### 🔸 `UMAP_S500_UMAPSFORPAPER_DROPOUT04_06.ipynb`
 UMAP embeddings for **S500 simple**, comparing dropout levels 0.4 and 0.6.
 
-### 🔸 `UMAP_S10000_UMAPSFORPAPER_DROPOUT02_0.8.png`
+### 🔸 `UMAP_S10000_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`
 UMAP embeddings for **S10000 simple**, comparing dropout levels 0.2 and 0.8.
 
-### 🔸 `UMAP_S10000C_UMAPSFORPAPER_DROPOUT02_0.8.png`
+### 🔸 `UMAP_S10000C_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`
 UMAP embeddings for **S10000 complex**, comparing dropout levels 0.2 and 0.8.
 
 ---

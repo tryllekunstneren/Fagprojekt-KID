@@ -4,6 +4,7 @@
 This repository contains code and visualizations for evaluating UMAP embeddings on simulated single-cell RNA-seq (scRNA-seq) data generated with [SymSim](https://github.com/YosefLab/SymSim). The goal of this project is to systematically explore how different distance metrics and dropout levels affect UMAP performance in sparse, high-dimensional gene expression data.
 
 ## 📁 Folder Overview
+
 All figures, notebooks, and plots are grouped by dataset and analysis type.
 
 ---
@@ -29,17 +30,43 @@ Contains all UMAP and evaluation plots for the **S500 simple** and **S500 comple
   UMAP visualizations for the **S500 complex** dataset with no dropout.
 
 #### 📊 Evaluation Metric Sensitivity (S500 only):
-To investigate metric bias in evaluation, we generated UMAPs using a fixed metric (Euclidean, Manhattan, or Minkowski) and evaluated each using all three metrics (Euclidean, Manhattan, Minkowski p=0.5).
+To investigate evaluation bias, we evaluated UMAPs (built with a fixed metric) using **all three evaluation metrics** (Euclidean, Manhattan, Minkowski p=0.5):
 
-These comparisons are stored as:
 - `UMAP_EVALMETRICS_EUCLIDEAN_S500.png`  
-  UMAP built with Euclidean, evaluated with Euclidean, Manhattan, and Minkowski.
-  
 - `UMAP_EVALMETRICS_MANHATTAN_S500.png`  
-  UMAP built with Manhattan, evaluated with all three metrics.
-  
 - `UMAP_EVALMETRICS_MINKOWSKI_S500.png`  
-  UMAP built with Minkowski (p=0.5), evaluated with all three metrics.
+
+These results reveal that the closer a metric is to the evaluation metric (usually Euclidean), the more favorable the trustworthiness scores tend to be.
+
+---
+
+### 🔹 UMAP_S5000/
+
+Contains UMAP visualizations for the **S5000 simple** dataset.
+
+#### Files:
+- `UMAP_ALL_S5000.ipynb`  
+  UMAP embeddings across all dropout levels (0.1–0.9).
+
+---
+
+### 🔹 UMAP_S10000/
+
+Contains UMAP analyses for the **S10000 simple** and **S10000 complex** datasets.
+
+#### Files:
+- `UMAP_ALL_S10000.ipynb`  
+  UMAP embeddings for **S10000 simple** across all dropout levels.
+
+- `UMAP_ALL_S10000_O.ipynb`  
+  UMAP embeddings for **S10000 complex** (nested classes) across all dropout levels.
+
+- `UMAP_S10000_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`  
+  Focused UMAP visualizations of **S10000 simple** at dropout 0.2 and 0.8 for the paper.
+
+- `UMAP_S10000C_UMAPSFORPAPER_DROPOUT02_0.8.ipynb`  
+  UMAP visualizations for **S10000 complex** at dropout 0.2 and 0.8 for visual comparison.
+
 ---
 
 ## 📎 Citation

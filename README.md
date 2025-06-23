@@ -19,6 +19,23 @@ To ensure reproducibility, we recommend creating a virtual environment and using
 bash
 pip freeze > requirements.txt
 
+# 📁 Data Access
+
+The datasets used in this project are stored externally due to their size.
+
+You can access and download all datasets here:
+
+🔗 [Google Drive – UMAP scRNA-seq Data](https://drive.google.com/drive/folders/1JDoNXzZA_zlaCrL6FRGtp7H4gGrwB3-E?usp=sharing)
+
+After downloading, place the datasets into a `data/` folder at the root of this project with the following structure:
+data/
+├── S500/
+├── S5000/
+└── S10000/
+
+This structure is expected by the notebooks in this repository. Make sure to maintain the folder names.
+
+
 ## 📁 Folder Overview
 
 All figures, notebooks, and plots are grouped by dataset and analysis type.

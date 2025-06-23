@@ -29,8 +29,11 @@ You can access and download all datasets here:
 
 After downloading, place the datasets into a `data/` folder at the root of this project with the following structure:
 data/
+
 ├── S500/
+
 ├── S5000/
+
 └── S10000/
 
 This structure is expected by the notebooks in this repository. Make sure to maintain the folder names.

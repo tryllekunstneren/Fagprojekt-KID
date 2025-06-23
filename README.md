@@ -3,6 +3,22 @@
 
 This repository contains code and visualizations for evaluating UMAP embeddings on simulated single-cell RNA-seq (scRNA-seq) data generated with [SymSim](https://github.com/YosefLab/SymSim). The goal of this project is to systematically explore how different distance metrics and dropout levels affect UMAP performance in sparse, high-dimensional gene expression data.
 
+## 🔁 Version Control and Reproducibility
+
+This project was developed and tested using **Python 3.11.5** and the latest available versions (as of runtime) of the following libraries:
+
+- `numpy`
+- `pandas`
+- `scanpy`
+- `scikit-learn`
+- `scipy`
+- `pickle` (Python built-in)
+
+To ensure reproducibility, we recommend creating a virtual environment and using:
+
+bash
+pip freeze > requirements.txt
+
 ## 📁 Folder Overview
 
 All figures, notebooks, and plots are grouped by dataset and analysis type.

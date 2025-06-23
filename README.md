@@ -41,7 +41,7 @@ This structure is expected by the notebooks in this repository. Make sure to mai
 
 ## 📁 Folder Overview
 
-All figures, notebooks, and plots are grouped by dataset and analysis type.
+All figures, notebooks, and plots are grouped by dataset and analysis type in the `UMAPS/` folder.
 
 ---
 
